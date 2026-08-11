@@ -8,7 +8,14 @@ Employee Payroll Calculator
 ![Build Status](https://img.shields.io/badge/tests-passing-brightgreen.svg)
 
 An object-oriented Python payroll system designed to calculate gross pay for both hourly and salaried workforce members. The engine uses a deterministic anchor-date model to manage 14-day pay periods, handling edge cases such as mid-period hires through automatic proration.
+✨ Key Technical Features
+Deterministic Bi-Weekly Pay Engine: Calculates pay windows using a fixed anchor date (2026-01-01), eliminating calendar drift across 14-day intervals.
 
+Smart Proration Logic: Automatically prorates salaried employee compensation when hire dates fall inside an active pay period (returns $0.0 for future hires).
+
+Data Encapsulation: Employs private attributes (__hrs_worked) to prevent accidental modification of recorded hourly data.
+
+Flexible Type Normalization: Robust parsing converts string dates (YYYY-MM-DD) or native datetime instances seamlessly.
 ---
 
 ## 📐 System Architecture
